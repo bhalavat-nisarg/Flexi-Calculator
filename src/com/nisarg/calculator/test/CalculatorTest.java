@@ -42,8 +42,8 @@ public class CalculatorTest {
 
     @Test
     void testChainOperations() {
-        assertEquals(16.0, calculator.chain(5, Operations.ADD, 3, Operations.MULTIPLY, 2));
-        assertEquals(4.0, calculator.chain(5, Operations.SUBTRACT, 3, Operations.MULTIPLY, 2));
+        assertEquals(16.0, calculator.chain(5, String.valueOf(Operations.ADD), 3, String.valueOf(Operations.MULTIPLY), 2));
+        assertEquals(4.0, calculator.chain(5, String.valueOf(Operations.SUBTRACT), 3, String.valueOf(Operations.MULTIPLY), 2));
     }
 
     @Test
